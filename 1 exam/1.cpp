@@ -3,53 +3,44 @@ using namespace std;
 class Inch
 {
 	public:
-    int i,k,f,n=2,sum1=0,sum=0;
+    int i,k,f,sum1=0,sum=0,j;
     
     void input()
     {
-      for(k=0;k<n;k++)
-	  {
-	  	
+     
     	cout<<"enter the inch i ";
     	cin>>i;
-    	
-    	
-    	i=i/12;
-    	sum1=sum1+i;
-    	
-		}	
-		cout<<" sum "<<sum1<<endl;
-	}
-	void user()
-	{
-		for(k=0;k<n;k++)
-		{
-			
 		cout<<"enter the inch f ";
-    	cin>>f;	
-    	f=f+(i/12);
-    	sum=sum+f;
-		}
-    	cout<<" sum "<<sum<<endl;
-	}
-	
-
-	
-	
-	
-	
+    	cin>>f;
+    	
+    	cout<<"enter the inch i ";
+    	cin>>i;
+		cout<<"enter the inch f ";
+    	cin>>f;
+    	
+    	sum = f+f;
+    	sum1 = i+i;
     
+    
+    	for(j=0; j<i; j++)
+    	{
+    		if(sum1>=12)
+    		{
+    			sum++;
+    			sum1-=12;
+			}
+		}
+    
+    	cout << "feet " <<sum << "inc" << sum1;
+	}
 	
 		
 };
 main()
 {
-	
-	Inch m;
-	m.input();
-	m.user();
+	Inch a;
+	a.input();
 	
 	
 	
-
 }
