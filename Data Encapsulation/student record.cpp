@@ -16,8 +16,7 @@ class Cla
 	public:
 		void input(int a)
 		{
-			
-				cout<<""<<endl;
+			cout<<""<<endl;
 		    	cout<<""<<"Enter the detail of student :"<<a<<" "<<"student"<<endl;
 		    	cout<<"Enter the student id ";
 		    	cin>>stu_id;
@@ -37,13 +36,10 @@ class Cla
 		    	getline(cin,line);
 		    	cout<<"Enter the student college : ";
 		    	getline(cin,stu_college);
-		    
-			
 		}
 		
 		void output(int a)
 		{
-			
 			cout<<"this are detail of :"<<a<<"student"<<endl;
 			cout<<"stu_id : "<<stu_id<<endl;
 			cout<<"stu_name : "<<stu_name<<endl;
@@ -52,11 +48,8 @@ class Cla
 			cout<<"stu_city : "<<stu_city<<endl;
 			cout<<"stu_email : "<<stu_email<<endl;
 			cout<<"stu_college : "<<stu_college<<endl;
-			
+		 }
 		
-		}
-		
-	
 };
 main()
 {
