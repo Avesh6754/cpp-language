@@ -30,9 +30,10 @@ class Cla
 		    getline(cin,cust_city);
 		    cout<<"Enter the customer age ";
 		    cin>>cust_age;
-		    getline(cin,line);
+		  
 		    cout<<"Enter the customer mobile number ";
-		    getline(cin,cust_mobile_number);
+		    cin>>cust_mobile_number;
+		     getline(cin,line);
 		    cout<<"Enter the customer cust_simcard_validity year ";
 		    cin>>cust_simcard_validity;
 		    getline(cin,line);
