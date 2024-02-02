@@ -12,7 +12,8 @@ class Cla
 {
 	int cust_id,cust_age,cust_simcard_validity;
 	
-	string cust_name,cust_city,cust_telecom_brand_name,cust_mobile_number,line;
+	string cust_name,cust_city,cust_telecom_brand_name,line;
+         long long int cust_mobile_number;
 	
 	public:
 		void input(int a)
