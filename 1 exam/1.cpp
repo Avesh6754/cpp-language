@@ -2,7 +2,7 @@
 using namespace std;
 class Inch
 {
-	public:
+    public:
     int i,k,f,sum1=0,sum=0,j;
     
     void input()
@@ -10,12 +10,12 @@ class Inch
      
     	cout<<"enter the inch i ";
     	cin>>i;
-		cout<<"enter the inch f ";
+	cout<<"enter the inch f ";
     	cin>>f;
     	
     	cout<<"enter the inch i ";
     	cin>>i;
-		cout<<"enter the inch f ";
+	cout<<"enter the inch f ";
     	cin>>f;
     	
     	sum = f+f;
@@ -26,21 +26,18 @@ class Inch
     	{
     		if(sum1>=12)
     		{
-    			sum++;
+    		        sum++;
     			sum1-=12;
-			}
 		}
+	}
     
     	cout << "feet " <<sum << "inc" << sum1;
 	}
 	
-		
 };
 main()
 {
 	Inch a;
 	a.input();
-	
-	
 	
 }
