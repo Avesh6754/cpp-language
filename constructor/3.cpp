@@ -27,7 +27,6 @@ class Diamond
 			this ->comp_export_diamonds=comp_export_diamonds;
 			this ->comp_name=comp_name;
 			this ->comp_ceo=comp_ceo;
-			
 		}
 		void output(int a)
 		{
@@ -40,11 +39,8 @@ class Diamond
 			cout<<" The company revenue : "<<comp_revenue<<endl;
 			cout<<" The company import : "<<comp_import_raw_diamonds<<endl;
 			cout<<" The company export : "<<comp_export_diamonds<<endl;
-			
 		}
 		
-		
-	
 };
 main()
 {
@@ -82,7 +78,5 @@ main()
 	{
 		d[i].output(x);
 	}
-	
-	
 
 }
