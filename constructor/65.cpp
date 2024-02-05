@@ -23,10 +23,10 @@ class Food
 			cout<<"Welcome to our Food cafe : "<<""<<endl;
 		
 		}
-		void input (int j)
+		void input ()
 		{
 			cout<<"------------------------------"<<endl;
-			cout<<"Enter the detail of Fast Food cafe : "<<j<<""<<endl;
+			cout<<"Enter the detail of Fast Food cafe : "<<""<<endl;
 			cout<<"Enter the Fast Food cafe id : ";
 			cin>>cafe_id;
 			cin.ignore();
@@ -46,10 +46,10 @@ class Food
 			cin>>cafe_establish_year;
 			cin.ignore();
 		}
-		void output(int j)
+		void output()
 		{
 			cout<<"------------------------------"<<endl;
-			cout<<"This are the detail of Fast Food cafe : "<<j<<endl;
+			cout<<"This are the detail of Fast Food cafe : "<<endl;
 			cout<<"Fast Food cafe name : "<<cafe_name<<endl;
 			cout<<"Fast Food cafe id : "<<cafe_id<<endl;
 			cout<<"Fast Food cafe type like (rooftop or normal) : "<<cafe_type<<endl;
@@ -64,21 +64,12 @@ class Food
 
 main()
 {
-	int i,n,j=1;
-	cout<<"Enter the number of cafe n : ";
-	cin>>n;
-	Food f[n];
-	for(i=0;i<n;i++)
-	{
-		f[i].input(j);
-		j++;
+             Food f;
+	
+		f.input();
+		f.output();
+	
 		
-	}
-	for(i=0;i<n;i++)
-	{
-		f[i].output(j);
-		j++;
-		
-	}
+	
 	
 }
