@@ -14,15 +14,18 @@ using namespace std;
 class Food
 {
 	int cafe_id,cafe_rating,cafe_establish_year,cafe_staff_quantity;
-	static int i;
+
 	string cafe_name,cafe_type,cafe_location;
 	
 	public:
 		Food()
 		{
-			
+			cout<<"Welcome to our Food cafe : "<<endl;
+		}
+		void input(int j)
+		{
 			cout<<"------------------------------"<<endl;
-			cout<<"Enter the detail of Fast Food cafe : "<<i<<endl;
+			cout<<"Enter the detail of Fast Food cafe : "<<""<<endl;
 			cout<<"Enter the Fast Food cafe id : ";
 			cin>>cafe_id;
 			cin.ignore();
@@ -41,8 +44,6 @@ class Food
 			cout<<"Enter the establish year of Fast Food cafe : ";
 			cin>>cafe_establish_year;
 			cin.ignore();
-			i=i+i;
-			
 		}
 		void output(int j)
 		{
@@ -58,7 +59,7 @@ class Food
 		}
 	
 };
-int Food::i=1;
+
 main()
 {
 	int i,n,j=1;
@@ -67,10 +68,15 @@ main()
 	Food f[n];
 	for(i=0;i<n;i++)
 	{
+		f[i].input(j);
+		j++;
+		
+	}
+	for(i=0;i<n;i++)
+	{
 		f[i].output(j);
 		j++;
 		
 	}
 	
 }
-
