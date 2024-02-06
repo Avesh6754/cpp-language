@@ -1,15 +1,4 @@
-//Q.1 Write a Program to make a Railway Reservation System.
-//Requirements:
-//(A) User Input: 
-//- Train Number
-//- Train Name
-//- Source
-//- Destination
-//- Train Time
-//(B) Display Records: 
-//- All Records
-//- By Searching Train Number
-//(C) Minimum 3 Input Train Records
+
 #include<iostream>
 using namespace std;
 class Railway
