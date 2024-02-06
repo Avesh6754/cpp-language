@@ -4,14 +4,15 @@ using namespace std;
 class Railway
 {
 	int Number,Time;
-	string name;
-	static string Destination,Source;
+	string name,Source;
+	static string Destination;
 	public:
 		Railway(int Number,string name,int Time)
 		{
 			this->Number=Number;
 			this->name=name;
 			this->Time=Time;
+			this->Source=Source;
 			
 		}
 		void output(int j)
@@ -27,7 +28,7 @@ class Railway
 	
 };
 string Railway::Destination="Mumbai";
-string Railway::Source="Ahmedabad";
+
 
 main()
 {
@@ -37,26 +38,63 @@ main()
 	int Number,Time;
 	string name,line;
 	Railway a[n]=Railway(Number,name,Time);
+	int arr[n];
 	for(i=0;i<n;i++)
 	{
 		cout<<"---------------------------"<<endl;
 		cout<<"Enter the detail of train : "<<endl;
-		getline(cin,line);
-		cout<<"Enter the train name : ";
-		getline(cin,name);
 		cout<<"Enter the train number : ";
 		cin>>Number;
+		cin.ignore();
+		cout<<"Enter the train name : ";
+		cin.ignore();
+		getline(cin,name);
 		cout<<"Enter the train time : ";
 		cin>>Time;
-		cin.ignore();
+//		cin.ignore();
+		arr[i]=Number;
 		a[i]=Railway(Number,name,Time);
+		
 	}
-	
+		
 	for(i=0;i<n;i++)
 	{
 		a[i].output(j);
 		j++;
 	}
+	int search,choice;
+	
+	do
+	{
+		cout<<"----------------------------------------"<<endl;
+		cout<<"Enter 1 to All record found : "<<endl;
+		cout<<"Enter 2 to search any train record : "<<endl;
+		cout<<"Enter 3 to exit from app : "<<endl;
+		cout<<"Enter your choice : "<<endl;
+		cin>>choice;
+		switch(choice)
+		{
+			case 1:for(i=0;i<n;i++)
+			{
+				a[i].output(j);
+			}
+			break;
+			case 2:
+			cout<<"Enter your search : "<<endl;
+				cin>>search;
+				
+			for(i=0;i<n;i++)
+			{
+				if(arr[i]==search)
+				{
+					a[i].output(j);
+				}
+			}
+			break;
+			
+			case 3:cout<<"Your exist from app : "<<endl;
+			}
+	}while(choice!=3);
 	
 	
 	 
