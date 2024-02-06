@@ -28,8 +28,6 @@ class Railway
 	
 };
 string Railway::Destination="Mumbai";
-
-
 main()
 {
 	int n,i,j=1;
@@ -51,7 +49,6 @@ main()
 		getline(cin,name);
 		cout<<"Enter the train time : ";
 		cin>>Time;
-//		cin.ignore();
 		arr[i]=Number;
 		a[i]=Railway(Number,name,Time);
 		
@@ -63,7 +60,6 @@ main()
 		j++;
 	}
 	int search,choice;
-	
 	do
 	{
 		cout<<"----------------------------------------"<<endl;
@@ -95,9 +91,6 @@ main()
 			case 3:cout<<"Your exist from app : "<<endl;
 			}
 	}while(choice!=3);
-	
-	
-	 
 } 
 
 
