@@ -3,11 +3,11 @@
 using namespace std;
 class Railway
 {
-	int Number;
-	string name,Source,Time;
+	int Number,Time;
+	string name,Source;
 	static string Destination;
 	public:
-		Railway(int Number,string name,string Time)
+		Railway(int Number,string name,int Time,string Source)
 		{
 			this->Number=Number;
 			this->name=name;
@@ -36,9 +36,9 @@ main()
 	int n,i,j=1;
 	cout<<"Enter the Railway record : ";
 	cin>>n;
-	int Number;
-	string name,line,Time;
-	Railway a[n]=Railway(Number,name,Time);
+	int Number,Time;
+	string name,line,Source;
+	Railway a[n]=Railway(Number,name,Time,Source);
 	int arr[n];
 	for(i=0;i<n;i++)
 	{
@@ -47,21 +47,18 @@ main()
 		cout<<"Enter the train number : ";
 		cin>>Number;
 		cin.ignore();
+		cout<<"Enter the train source : ";
+		getline(cin,Source);
+//		cin.ignore();
 		cout<<"Enter the train name : ";
-		cin.ignore();
 		getline(cin,name);
 		cout<<"Enter the train time : ";
-		getline(cin,Time);
+		cin>>Time;
+		cin.ignore();
 		arr[i]=Number;
-		a[i]=Railway(Number,name,Time);
+		a[i]=Railway(Number,name,Time,Source);
 		
 	}
-		
-//	for(i=0;i<n;i++)
-//	{
-//		a[i].output(j);
-//		j++;
-//	}
 	int search,choice;
 	do
 	{
@@ -75,6 +72,7 @@ main()
 		{
 			case 1:for(i=0;i<n;i++)
 			{
+				
 				a[i].output(j);
 			}
 			break;
