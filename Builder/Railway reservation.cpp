@@ -3,17 +3,16 @@
 using namespace std;
 class Railway
 {
-	int Number,Time;
-	string name,Source;
+	int Number;
+	string name,Source,Time;
 	static string Destination;
 	public:
-		Railway(int Number,string name,int Time)
+		Railway(int Number,string name,string Time)
 		{
 			this->Number=Number;
 			this->name=name;
 			this->Time=Time;
 			this->Source=Source;
-			
 		}
 		void output(int j)
 		{
@@ -25,6 +24,10 @@ class Railway
 			cout<<"Train Destination :"<<Destination<<" "<<endl;
 			cout<<"Train Time :"<<Time<<" "<<endl;
 		}
+		~Railway()
+		{
+			cout<<endl<<"Thank you for use our service : "<<endl;
+		}
 	
 };
 string Railway::Destination="Mumbai";
@@ -33,8 +36,8 @@ main()
 	int n,i,j=1;
 	cout<<"Enter the Railway record : ";
 	cin>>n;
-	int Number,Time;
-	string name,line;
+	int Number;
+	string name,line,Time;
 	Railway a[n]=Railway(Number,name,Time);
 	int arr[n];
 	for(i=0;i<n;i++)
@@ -48,17 +51,17 @@ main()
 		cin.ignore();
 		getline(cin,name);
 		cout<<"Enter the train time : ";
-		cin>>Time;
+		getline(cin,Time);
 		arr[i]=Number;
 		a[i]=Railway(Number,name,Time);
 		
 	}
 		
-	for(i=0;i<n;i++)
-	{
-		a[i].output(j);
-		j++;
-	}
+//	for(i=0;i<n;i++)
+//	{
+//		a[i].output(j);
+//		j++;
+//	}
 	int search,choice;
 	do
 	{
