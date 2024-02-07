@@ -23,8 +23,6 @@ class Supermarket
 		{
 			cout<<"------------------------------------"<<endl;
 			cout<<"This are the product deatil : "<<endl;
-			cout<<"Id : "<<id<<" "<<endl;
-			cout<<"Password : "<<Password<<" "<<endl;
 			cout<<"Item_Number : "<<Item_Number<<" "<<endl;
 			cout<<"Item_Name : "<<Item_Name<<" "<<endl;
 			cout<<"Quantity : "<<Quantity<<" "<<endl;
@@ -47,17 +45,15 @@ main()
 	string Item_Name,id;
 	Supermarket s[n]=Supermarket(Item_Number,Quantity,Price,Password,Item_Name,id);
 	int arr[n];
-	
-	
+	cout<<"Enter the id : ";
+	cin.ignore();
+	getline(cin,id);
+	cout<<"Enter the password : ";
+	cin>>Password;
 	for(i=0;i<n;i++)
 	{
 		cout<<"-----------------------------------------"<<endl;
 		cout<<"Enter the deatil of Supermarket : "<<endl;
-		cout<<"Enter the id : ";
-		cin.ignore();
-		getline(cin,id);
-		cout<<"Enter the password : ";
-		cin>>Password;
 		cout<<"Enter the Item_Number : ";
 		cin>>Item_Number;
 		cout<<"Enter the Item Name : ";
@@ -81,26 +77,27 @@ main()
 	
 	for(i=0;i<n;i++)
 	{
-		if(Id==s[i].id && password==s[i].Password)
+		if(Id==id && password==Password)
 		{
-			start:
-			cout<<"Enter number for search product : ";
-			cin>>number;	
-			for(i=0;i<n;i++)
-			{
+			do{
+			
+				cout<<"Enter number for search product : ";
+				cin>>number;	
+				for(i=0;i<n;i++)
+				{
 				
-				if(arr[i]==number)
-				{
-					s[i].product_output(j);
-					j++;
-					break;
+					if(number == arr[i])
+					{
+						s[i].product_output(j);
+						j++;
+					}
+			
 				}
-				else
+				if(number==3)
 				{
-					cout<<"Enter the valid item number : "<<endl;
-					goto start;
+					cout<<endl<<"Your exit from app : "<<endl;
 				}
-			}
+		   	}while(number!=3);
 		}
 		else
 		{
