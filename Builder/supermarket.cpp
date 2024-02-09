@@ -80,7 +80,7 @@ main()
 		if(Id==id && password==Password)
 		{
 			do{
-			        cout<<"Enter 3 to exit from app "<<" "<<endl;
+			    cout<<"Enter 3 to exit from app "<<" "<<endl;
 				cout<<"Enter number for search product : ";
 				cin>>number;	
 				for(i=0;i<n;i++)
@@ -90,6 +90,12 @@ main()
 					{
 						s[i].product_output(j);
 						j++;
+					}
+					else
+					{
+						cout<<"-----------------------------------"<<endl;
+						cout<<"Enter valid item Number : "<<endl;
+						
 					}
 			
 				}
