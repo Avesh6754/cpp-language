@@ -1,12 +1,4 @@
-//Q.1 Write a Program to get and display Hotels and static information using Encapsulation with an array of objects member by including the below-mentioned attributes:
-//- hotel_id
-//- hotel_name -static
-//- hotel_type (like hotel or motel)
-//- hotel_rating (like 1 Star, 2 Start, ..., 7 Star)
-//- hotel_location (city name)
-//- hotel_establish_year - static
-//- hotel_staff_quantity
-//- hotel_room_quantity
+
 
 #include<iostream>
 using namespace std;
