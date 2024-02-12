@@ -34,28 +34,28 @@ class RBI
 class SBI:public RBI
 {
 	public:
-		void set1()
+		void getROI()
 		{
 			sbi();
-			cout<<"SBI rate of interest "<<Rate1<<"%"<<endl;
+			cout<<"SBI rate of interest "<<Rate1<<" %"<<endl;
 		}
 };
 class ICICI : public RBI{
 	public:
 		
-		void set2()
+		void getROI()
 		{
 			icici();
-			cout<<"ICICI rate of interest "<<Rate2<<"%"<<endl;
+			cout<<"ICICI rate of interest "<<Rate2<<" %"<<endl;
 		}
 };
 class BOB:public RBI
 {
 	public:
-		void set3()
+		void getROI()
 		{
 			bob();
-			cout<<"BOB rate of interest "<<Rate3<<"%"<<endl;
+			cout<<"BOB rate of interest "<<Rate3<<" %"<<endl;
 		}
 	
 };
@@ -66,10 +66,10 @@ main()
 //	r.icici();
 //	r.sbi();
 	SBI s;
-	s.set1();
+	s.getROI();
 	ICICI i;
-	i.set2();
+	i.getROI();
 	BOB b;
-	b.set3();
+	b.getROI();
 	
 }
