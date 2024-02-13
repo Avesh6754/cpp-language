@@ -10,34 +10,23 @@ using namespace std;
 
 class RBI
 {
-	public:
-		float Rate1,Rate2,Rate3;
-		void sbi()
+	protected:
+		float Rate;
+		void set()
 		{
-			cout<<"Entre the value of sbi : ";
-			cin>>Rate1;
+			cout<<"Enter the rate of interest : ";
+			cin>>Rate;
 			
 		}
-		void icici()
-		{
-			cout<<"Entre the value of icici : ";
-			cin>>Rate2;	
-			
-		}
-		void bob()
-		{
-			cout<<"Entre the value of bob : ";
-			cin>>Rate3;	
-			
-		}
+		
 };
 class SBI:public RBI
 {
 	public:
 		void getROI()
 		{
-			sbi();
-			cout<<"SBI rate of interest "<<Rate1<<" %"<<endl;
+			set();
+			cout<<endl<<"SBI rate of interest "<<Rate<<" %"<<endl;
 		}
 };
 class ICICI : public RBI{
@@ -45,8 +34,8 @@ class ICICI : public RBI{
 		
 		void getROI()
 		{
-			icici();
-			cout<<"ICICI rate of interest "<<Rate2<<" %"<<endl;
+			set();
+			cout<<endl<<"ICICI rate of interest "<<Rate<<" %"<<endl;
 		}
 };
 class BOB:public RBI
@@ -54,17 +43,14 @@ class BOB:public RBI
 	public:
 		void getROI()
 		{
-			bob();
-			cout<<"BOB rate of interest "<<Rate3<<" %"<<endl;
+			set();
+			cout<<endl<<"BOB rate of interest "<<Rate<<" %"<<endl;
 		}
 	
 };
 main()
 {
-//	RBI r;
-//	r.bob();
-//	r.icici();
-//	r.sbi();
+
 	SBI s;
 	s.getROI();
 	ICICI i;
