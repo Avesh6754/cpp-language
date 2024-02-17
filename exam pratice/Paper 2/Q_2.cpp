@@ -8,34 +8,33 @@ using namespace std;
 
 class BankAccount
 {
-	int balance;
-	long long int accountNumber;
-	string ownerName;
+	int balance,withdraw,deposite;
+	static long long int accountNumber;
+	static string ownerName;
 		public:
-			void credit()
+			void set()
 			{
+				balance=10000;
 				cout<<"------------------------------------------"<<endl;
-				cout<<"Enter the bank account holder deatils : "<<" "<<endl;
-				cout<<"Enter the owner Name : ";
-				getline(cin,ownerName);
-				cout<<"Entre the Account number : ";
-				cin>>accountNumber;
-				cout<<"Enter the owner balance : ";
-				cin>>balance;
+				cout<<"Enter the amount to withdraw : ";
+				cin>>withdraw;
+				balance-=withdraw;
+				cout<<"Total Amount After withdraw : "<<withdraw<<" "<<endl;
 			}
-			void debit()
+			void get()
 			{
 				cout<<"------------------------------------------"<<endl;
-				cout<<" The bank account holder deatils : "<<" "<<endl;
-				cout<<"Name       	 : "<<ownerName<<" "<<endl;
-				cout<<"AccountNumber : "<<accountNumber<<" "<<endl;
-				cout<<"Balance		 : "<<"Rs "<<balance<<" "<<endl;
+				cout<<"Enter the amount to deposite : ";
+				cin>>deposite;
+				balance+=deposite;
 			}
 	
 };
+long long int BankAccount::accountNumber=696695854;
+string BankAccount::ownerName="Avesh Kumar ";
 main()
 {
 	BankAccount b1;
-	b1.credit();
-	b1.debit();
+	b1.set();
+	b1.get();
 }
