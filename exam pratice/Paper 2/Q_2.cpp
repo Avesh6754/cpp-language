@@ -15,11 +15,12 @@ class BankAccount
 			void set()
 			{
 				balance=10000;
+				cout<<"Total Amount before withdraw : "<<balance<<" "<<endl;
 				cout<<"------------------------------------------"<<endl;
 				cout<<"Enter the amount to withdraw : ";
 				cin>>withdraw;
 				balance-=withdraw;
-				cout<<"Total Amount After withdraw : "<<withdraw<<" "<<endl;
+				cout<<"Total Amount After withdraw : "<<balance<<" "<<endl;
 			}
 			void get()
 			{
@@ -27,8 +28,9 @@ class BankAccount
 				cout<<"Enter the amount to deposite : ";
 				cin>>deposite;
 				balance+=deposite;
+				cout<<"Total Amount After deposite : "<<balance<<" "<<endl;
 			}
-	
+					
 };
 long long int BankAccount::accountNumber=696695854;
 string BankAccount::ownerName="Avesh Kumar ";
