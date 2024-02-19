@@ -59,7 +59,7 @@ class BankAccount
 					star:
 					st:
 					cout<<"Enter your choice between Deposite and Withdraw : "<<endl;
-					cout<<"Enter 1 -> Debit And entre 2-> for credit : ";
+					cout<<"Enter 1 -> Withdraw And entre 2-> for Deposite : ";
 					cin>>n;
 				
 						
