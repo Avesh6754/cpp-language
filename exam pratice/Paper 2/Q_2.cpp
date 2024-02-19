@@ -15,51 +15,71 @@ class BankAccount
 			void Debit()
 			{
 				balance=10000;
-				cout<<"Total Amount : "<<balance<<" "<<endl;
+				cout<<endl<<"Total Amount : "<<balance<<" "<<endl;
 				st:
 				cout<<"------------------------------------------"<<endl;
 				cout<<"Enter the amount to withdraw : ";
 				cin>>withdraw;
-				if(withdraw<=balance)
+				if(withdraw>0)
 				{
-					balance-=withdraw;
-					cout<<"Total Amount After withdraw : "<<balance<<" "<<endl;
+					
+					if(withdraw<=balance)
+					{
+						balance-=withdraw;
+						cout<<endl<<"Total Amount After withdraw : "<<balance<<" "<<endl;
+					}
+					else
+					{
+						cout<<endl<<"You balance in Bank : "<<balance<<" "<<endl;
+						goto st;
+					}
 				}
 				else
 				{
-					cout<<"You balance in Bank : "<<balance<<" "<<endl;
+					cout<<endl<<"Please Enter positive number : "<<endl;
 					goto st;
 				}
 			}
 			void Credit()
 			{
 				balance=10000;
-				cout<<"Total Amount : "<<balance<<" "<<endl;
+				cout<<endl<<"Total Amount : "<<balance<<" "<<endl;
+				st:
 				cout<<"------------------------------------------"<<endl;
 				cout<<"Enter the amount to deposite : ";
 				cin>>deposite;
-				balance+=deposite;
-				cout<<"Total Amount After deposite : "<<balance<<" "<<endl;
+				if(deposite>0)
+				{
+					
+					balance+=deposite;
+					cout<<endl<<"Total Amount After deposite : "<<balance<<" "<<endl;
+				}
+				else
+				{
+					cout<<endl<<"Please Enter positive number : "<<endl;
+					goto st;
+				}
 			}
 			public:
 			void Display()
 			{
 				long long AccountNumber;
 				int n;
-				cout<<"You account number : "<<accountNumber<<endl;
+				cout<<endl<<"You account number : "<<accountNumber<<endl;
 				start:
-				cout<<"Enter the account number to verfiy you account : ";
+				cout<<endl<<"Enter the account number to verfiy you account : ";
 				cin>>AccountNumber;
 				if(AccountNumber==accountNumber)
 				{
 					
-					cout<<"Your Account number is verify :  "<<endl;
-					cout<<"Welcome to Bank service : "<<ownerName<<endl;
+					cout<<endl<<"Your Account number is verify :  "<<endl;
+					cout<<endl<<"Welcome to Bank service : "<<ownerName<<endl;
 					
 					star:
 					st:
-					cout<<"Enter your choice between Deposite and Withdraw : "<<endl;
-					cout<<"Enter 1 -> Withdraw And entre 2-> for Deposite : ";
+					cout<<"------------------------------------------"<<endl;
+					cout<<endl<<"Enter your choice between Deposite and Withdraw : "<<endl;
+					cout<<endl<<"Enter 1 -> Withdraw "<<endl<<"Entre 2-> for Deposite"<<endl<<"Enter 3-> to finished process : ";
 					cin>>n;
 				
 						
@@ -73,9 +93,13 @@ class BankAccount
 							Debit();
 							goto st;
 						}
+						else if(n==3)
+						{
+							cout<<endl<<"Process Finished : "<<endl;
+						}
 						else
 						{
-							cout<<"Please entre the number 1 and 2 : "<<endl;
+							cout<<endl<<"Please entre the number 1 and 2 : "<<endl;
 							goto star;
 						}
 				
@@ -83,10 +107,14 @@ class BankAccount
 				}
 				else
 				{
-					cout<<"Please entre the correct Account number : "<<endl;
+					cout<<endl<<"Please entre the correct Account number : "<<endl;
 					goto start;
 				}
 				
+			}
+			~BankAccount()
+			{
+				cout<<endl<<"Thank You Sir : "<<endl;
 			}
 					
 };
