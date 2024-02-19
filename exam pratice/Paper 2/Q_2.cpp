@@ -57,23 +57,28 @@ class BankAccount
 					cout<<"Welcome to Bank service : "<<ownerName<<endl;
 					
 					star:
+					st:
 					cout<<"Enter your choice between Deposite and Withdraw : "<<endl;
 					cout<<"Enter 1 -> Debit And entre 2-> for credit : ";
 					cin>>n;
-					if(n==2)
-					{
-						Credit();
-					}
-					else if(n==1)
-					{
-						Debit();
+				
 						
-					}
-					else
-					{
-						cout<<"Please entre the number 1 and 2 : "<<endl;
-						goto star;
-					}
+						if(n==2)
+						{
+							Credit();
+							goto st;
+						}
+						else if(n==1)
+						{
+							Debit();
+							goto st;
+						}
+						else
+						{
+							cout<<"Please entre the number 1 and 2 : "<<endl;
+							goto star;
+						}
+				
 					
 				}
 				else
