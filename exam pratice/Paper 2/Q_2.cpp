@@ -9,34 +9,86 @@ using namespace std;
 class BankAccount
 {
 	int balance,withdraw,deposite;
-	static long long int accountNumber;
+	static long long  accountNumber;
 	static string ownerName;
-		public:
-			void set()
+		private:
+			void Debit()
 			{
 				balance=10000;
-				cout<<"Total Amount before withdraw : "<<balance<<" "<<endl;
+				cout<<"Total Amount : "<<balance<<" "<<endl;
+				st:
 				cout<<"------------------------------------------"<<endl;
 				cout<<"Enter the amount to withdraw : ";
 				cin>>withdraw;
-				balance-=withdraw;
-				cout<<"Total Amount After withdraw : "<<balance<<" "<<endl;
+				if(withdraw<=balance)
+				{
+					balance-=withdraw;
+					cout<<"Total Amount After withdraw : "<<balance<<" "<<endl;
+				}
+				else
+				{
+					cout<<"You balance in Bank : "<<balance<<" "<<endl;
+					goto st;
+				}
 			}
-			void get()
+			void Credit()
 			{
+				balance=10000;
+				cout<<"Total Amount : "<<balance<<" "<<endl;
 				cout<<"------------------------------------------"<<endl;
 				cout<<"Enter the amount to deposite : ";
 				cin>>deposite;
 				balance+=deposite;
 				cout<<"Total Amount After deposite : "<<balance<<" "<<endl;
 			}
+			public:
+			void Display()
+			{
+				long long AccountNumber;
+				int n;
+				cout<<"You account number : "<<accountNumber<<endl;
+				start:
+				cout<<"Enter the account number to verfiy you account : ";
+				cin>>AccountNumber;
+				if(AccountNumber==accountNumber)
+				{
+					
+					cout<<"Your Account number is verify :  "<<endl;
+					cout<<"Welcome to Bank service : "<<ownerName<<endl;
+					
+					star:
+					cout<<"Enter your choice between Deposite and Withdraw : "<<endl;
+					cout<<"Enter 1 -> Debit And entre 2-> for credit : ";
+					cin>>n;
+					if(n==2)
+					{
+						Credit();
+					}
+					else if(n==1)
+					{
+						Debit();
+						
+					}
+					else
+					{
+						cout<<"Please entre the number 1 and 2 : "<<endl;
+						goto star;
+					}
+					
+				}
+				else
+				{
+					cout<<"Please entre the correct Account number : "<<endl;
+					goto start;
+				}
+				
+			}
 					
 };
-long long int BankAccount::accountNumber=696695854;
+long long BankAccount::accountNumber=12345;
 string BankAccount::ownerName="Avesh Kumar ";
 main()
 {
 	BankAccount b1;
-	b1.set();
-	b1.get();
+	b1.Display();
 }
