@@ -14,7 +14,6 @@ class BankAccount
 		private:
 			void Debit()
 			{
-				balance=10000;
 				cout<<endl<<"Total Amount : "<<balance<<" "<<endl;
 				st:
 				cout<<"------------------------------------------"<<endl;
@@ -22,7 +21,6 @@ class BankAccount
 				cin>>withdraw;
 				if(withdraw>0)
 				{
-					
 					if(withdraw<=balance)
 					{
 						balance-=withdraw;
