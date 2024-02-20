@@ -14,6 +14,7 @@ class BankAccount
 		private:
 			void Debit()
 			{
+				balance=1000;
 				cout<<endl<<"Total Amount : "<<balance<<" "<<endl;
 				st:
 				cout<<"------------------------------------------"<<endl;
