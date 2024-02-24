@@ -8,13 +8,13 @@ using namespace std;
 
 class BankAccount
 {
-	int balance,withdraw,deposite;
+	int withdraw,deposite;
+	static int balance;
 	static long long  accountNumber;
 	static string ownerName;
 		private:
 			void Debit()
 			{
-				balance=1000;
 				cout<<endl<<"Total Amount : "<<balance<<" "<<endl;
 				st:
 				cout<<"------------------------------------------"<<endl;
@@ -41,7 +41,7 @@ class BankAccount
 			}
 			void Credit()
 			{
-				balance=10000;
+			
 				cout<<endl<<"Total Amount : "<<balance<<" "<<endl;
 				st:
 				cout<<"------------------------------------------"<<endl;
@@ -119,6 +119,7 @@ class BankAccount
 };
 long long BankAccount::accountNumber=12345;
 string BankAccount::ownerName="Avesh Kumar ";
+int BankAccount::balance=10000;
 main()
 {
 	BankAccount b1;
