@@ -2,7 +2,7 @@
 //Q.1 Write a Program to implement exception handling mechanism for different types of scenarios:
 //- a number cannot be divided by zero
 //- a person cannot be able to vote if his/her age is less than 18
-//- a password cannot be validated if it doesn’t contains an uppercase letter
+//- a password cannot be validated if it doesnâ€™t contains an uppercase letter
 
 #include<iostream>
 #include<string.h>
@@ -10,11 +10,11 @@ using namespace std;
 
 main()
 {
-	char Password[50];
+	string Password;
 	cout<<"Enter your Password : ";
 	cin>>Password;
 	
-	int len=strlen(Password);
+	int len= Password.length();
 	int check=0;
 	for(int i=0;i<=len;i++)
 	{
@@ -37,6 +37,6 @@ main()
 	}
 	catch(...)
 	{
-		cout<<" "<< " Password cannot be validated if it doesn’t contains an uppercase letter "; 
+		cout<<" "<< " Password cannot be validated if it does not contains an uppercase letter "; 
 	}
 }
