@@ -1,4 +1,4 @@
-//Q.1 Write a Program to get and display N numbers of Diamond companies information using encapsulation and use of Parameterised Constructor by including below
+//Q.1 Write a Program to get and display N numbers of Diamond companies information using Parameterised Constructor by including below
 //mentioned attributes:
 //- comp_id
 //- comp_name
